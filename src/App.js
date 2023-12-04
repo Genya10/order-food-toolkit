@@ -1,9 +1,20 @@
 import './App.css';
+import { RecipeItem } from './recipe-item/RecipeItem';
+
 
 function App() {
   return (
     <div className="App">
-  <h1>Toolkit</h1>
+  <RecipeItem 
+    recipe={{
+      id:1,
+      name:'Stew fish'
+    }}/>
+      <RecipeItem 
+    recipe={{
+      id:2,
+      name:'Salad Cesar'
+    }}/>
     </div>
   );
 }
