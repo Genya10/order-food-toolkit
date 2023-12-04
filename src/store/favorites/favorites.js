@@ -16,4 +16,4 @@ export const favoritesSlice = createSlice({
   },
 });
 
-export const {action,reducer} = favoritesSlice;
+export const {actions,reducer} = favoritesSlice;
