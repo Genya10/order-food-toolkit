@@ -1,10 +1,11 @@
 import cl from './RecipeItem.module.css';
 import { useSelector} from 'react-redux';
-import { actions } from '../store/favorites/favorites';
 import { useActions } from '../hooks/useActions';
+import { useSelectorFav } from '../hooks/useSelectorFav';
 
 export const RecipeItem=({recipe})=>{
-    const {favorites} = useSelector(state => state);
+   
+    const {favorites} = useSelectorFav();
     //console.log(favorites);
     const {toggleFavorites} = useActions();
     const isExists = favorites.some(r => r.id === recipe.id)
