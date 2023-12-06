@@ -4,7 +4,7 @@ const API_URL = 'http://localhost:4200/recipes'
 
 export const api = createApi({
   reducerPath: "api",
-  tagTypes:['Recipe'],
+  //tagTypes:['Recipe'],
   baseQuery: fetchBaseQuery({
     baseUrl: API_URL,
   }),

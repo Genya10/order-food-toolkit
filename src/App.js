@@ -6,23 +6,19 @@ import { useGetRecipesQuery } from './api/api';
 function App() {
 
   const {isLoading,data}=useGetRecipesQuery();
-  console.log();
-  
+  console.log(data);
+
   return (
     <div className="App">
       <Header />
-      <RecipeItem
-        recipe={{
-          id: 1,
-          name: "Stew fish",
-        }}
-      />
-      <RecipeItem
-        recipe={{
-          id: 2,
-          name: "Salad Cesar",
-        }}
-      />
+      {isLoading 
+      ? ( <h2>Loading...</h2>)
+       :data 
+      ? (data.map((recipe)=>{
+        return <RecipeItem key={recipe.id} recipe={recipe}/>})
+        )
+        :(<div>Not found</div> )    
+      }
     </div>
   );
 }

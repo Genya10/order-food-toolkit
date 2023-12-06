@@ -8,3 +8,6 @@
 .recipeItem h2{
     margin-bottom: 0.3rem;
 }
+.recipeItem img{
+    border-radius: 0.6rem;
+}
