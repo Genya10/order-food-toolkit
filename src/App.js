@@ -6,8 +6,7 @@ import { CreateRecipe } from './create-recipe/CreateRecipe';
 
 function App() {
 
-  const {isLoading,data}=useGetRecipesQuery();
-  console.log(data);
+  const {isLoading,data} = useGetRecipesQuery();
 
   return (
     <div className="App">

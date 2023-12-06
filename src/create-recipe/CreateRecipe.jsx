@@ -4,7 +4,7 @@ import {useCreateRecipeMutation} from "../api/recipeApi"
 
 const defaultValue = {
     name:'',
-    img:''
+    image:''
 }
 
 export const CreateRecipe =()=>{
@@ -23,6 +23,7 @@ export const CreateRecipe =()=>{
     return (
       <div>
         <form onSubmit={handleSubmit}>
+            <p>Create new recipe</p>
           <label >
             <input
               onChange={(e) => setNewRecipe({...newRecipe,name:e.target.value})}
@@ -33,10 +34,10 @@ export const CreateRecipe =()=>{
           </label>
           <label >
             <input
-              onChange={(e)=> setNewRecipe({...newRecipe,img:e.target.value})}
+              onChange={(e)=> setNewRecipe({...newRecipe,image:e.target.value || ""})}
               type="text"
               placeholder="img recipe"
-              value={newRecipe.img}
+              value={newRecipe.image}
             />
           </label>
           <button
