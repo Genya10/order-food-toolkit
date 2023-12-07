@@ -12,7 +12,7 @@ export const RecipeItem=({recipe}:IRecipeItem)=>{
    
     const {favorites} = useSelectorFav();
     const {toggleFavorites} = useActions();
-    const isExists = favorites.some(r => r.id === recipe.id)
+    const isExists = favorites.some((r:IRecipe) => r.id === recipe.id)
 
   return (
     <div className={cl.recipeItem}>
