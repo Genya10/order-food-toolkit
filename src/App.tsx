@@ -6,7 +6,7 @@ import { CreateRecipe } from './create-recipe/CreateRecipe';
 
 function App() {
 
-  const {isLoading,data} = useGetRecipesQuery();
+  const {isLoading,data} = useGetRecipesQuery(null);
 
   return (
     <div className="App">
@@ -15,7 +15,7 @@ function App() {
       {isLoading 
       ? ( <h2>Loading...</h2>)
        :data 
-      ? (data.map((recipe)=>{
+      ? (data.map((recipe:any)=>{
         return <RecipeItem key={recipe.id} recipe={recipe}/>})
         )
         :(<div>Not found</div> )    
