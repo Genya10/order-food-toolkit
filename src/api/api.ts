@@ -17,7 +17,6 @@ export const api = createApi({
           id: search
         }]
     }),
-
   })
 });
 
