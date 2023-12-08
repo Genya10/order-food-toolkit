@@ -8,7 +8,8 @@ export const Header=()=>{
     const {favorites} = useSelectorFav();
     return (
       <div className={cl.header}>
-        <FaHeartPulse fontSize={22} />
+        <h2>Favorites</h2>
+        <FaHeartPulse fontSize={28} />
         <span>{favorites.length}</span>
       </div>
     );

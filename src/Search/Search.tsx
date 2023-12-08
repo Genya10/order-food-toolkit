@@ -15,8 +15,8 @@ export const Search = (props: PropsSearch) => {
 
   return (
     <div className={cl.search}>
-      <div style={{ padding: 10 }}>
-        <p> Find dish:</p>
+      <div className={cl.search}>
+        <p className={cl.titleSearch}> Find dish:</p>
         <div>
           <input
             type="search"
